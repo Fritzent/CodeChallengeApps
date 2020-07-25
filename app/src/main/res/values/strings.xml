@@ -7,4 +7,17 @@
     <string name="txt_created">Created By</string>
     <string name="txt_creator">afritzent</string>
     <string name="message">Do you want to close the application?</string>
+    <string name="txt_rock">Rock</string>
+    <string name="txt_scissors">Scissors</string>
+    <string name="txt_paper">Paper</string>
+    <string name="txt_player">Player</string>
+    <string name="txt_com">Com</string>
+    <string name="txt_dummy">dummy</string>
+    <string name="results">Results</string>
+    <string name="txt_try_again">Click To Try Again</string>
+
+    <string name="txt_blank"> </string>
+    <string name="txt_draw">draw</string>
+    <string name="txt_player_win">Player Win</string>
+    <string name="txt_com_win">Com Winner</string>
 </resources>

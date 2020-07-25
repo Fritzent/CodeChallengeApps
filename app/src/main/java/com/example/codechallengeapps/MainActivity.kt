@@ -1,6 +1,7 @@
 package com.example.codechallengeapps
 
 import android.content.DialogInterface
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
@@ -25,6 +26,10 @@ class MainActivity : AppCompatActivity() {
 
         val titleFont: Typeface = Typeface.createFromAsset(assets, "fonts/trulymadly.ttf")
         val subFont: Typeface = Typeface.createFromAsset(assets, "fonts/bubbleboddyextralight.ttf")
+
+        mainBinding.btnStart.setOnClickListener {
+            startActivity(Intent(applicationContext,GameActivity::class.java))
+        }
 
         mainBinding.btnExit.setOnClickListener {
             closeApps(titleFont,subFont)
@@ -62,7 +67,7 @@ class MainActivity : AppCompatActivity() {
         title.setTextColor(Color.parseColor("#060607"))
         message.setTextColor(Color.parseColor("#2e2e2e"))
         btnPostive.setTextColor(Color.parseColor("#ffffff"))
-        btnPostive.setBackgroundResource(R.drawable.btn_background_selector)
+        btnPostive.setBackgroundResource(R.drawable.btn_exit_selector)
         btnNegative.setTextColor(Color.parseColor("#ffffff"))
         btnNegative.setBackgroundResource(R.drawable.btn_background_selector)
 

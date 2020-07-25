@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWhite"
     tools:context=".GameActivity">
 
     <androidx.constraintlayout.widget.Guideline
@@ -32,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.15" />
+        app:layout_constraintGuide_percent="0.2" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideLineEnd"
@@ -46,14 +47,198 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.85" />
+        app:layout_constraintGuide_percent="0.8" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideLineMiddle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent=".5"
+        app:layout_constraintGuide_percent=".75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineHorizontalMiddleScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".5" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLineVerticalMiddleScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
+
+    <TextView
+        android:id="@+id/txt_rock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/atariclassicchunky"
+        android:text="@string/txt_rock"
+        android:textColor="@color/colorOrange"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+        app:layout_constraintStart_toStartOf="@id/guideLineStart"
+        app:layout_constraintTop_toTopOf="@id/guideLineTop" />
+
+    <TextView
+        android:id="@+id/txt_scissors"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/atariclassicchunky"
+        android:text="@string/txt_scissors"
+        android:textColor="@color/colorGreenSoft"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+        app:layout_constraintStart_toStartOf="@id/guideLineStart"
+        app:layout_constraintTop_toBottomOf="@id/txt_rock" />
+
+    <TextView
+        android:id="@+id/txt_paper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/atariclassicchunky"
+        android:text="@string/txt_paper"
+        android:textColor="@color/colorUngu"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+        app:layout_constraintStart_toStartOf="@id/guideLineStart"
+        app:layout_constraintTop_toBottomOf="@id/txt_scissors" />
+
+    <TextView
+        android:id="@+id/txt_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/trulymadly"
+        android:text="@string/txt_player"
+        android:textColor="@color/colorFont"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@id/guideLineIconStart"
+        app:layout_constraintStart_toStartOf="@id/guideLineIconStart"
+        app:layout_constraintTop_toBottomOf="@id/txt_paper" />
+
+    <ImageView
+        android:id="@+id/playerrockchoose"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/rockhand"
+        app:layout_constraintEnd_toEndOf="@id/guideLineIconStart"
+        app:layout_constraintStart_toStartOf="@id/guideLineIconStart"
+        app:layout_constraintTop_toBottomOf="@id/txt_player"
+        android:contentDescription="@string/txt_rock"/>
+
+    <ImageView
+        android:id="@+id/playerpaperchoose"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/paperhand"
+        app:layout_constraintEnd_toEndOf="@id/guideLineIconStart"
+        app:layout_constraintStart_toStartOf="@id/guideLineIconStart"
+        app:layout_constraintTop_toBottomOf="@id/playerrockchoose"
+        android:contentDescription="@string/txt_paper"/>
+
+    <ImageView
+        android:id="@+id/playerscissorschoose"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/scissorchand"
+        app:layout_constraintEnd_toEndOf="@id/guideLineIconStart"
+        app:layout_constraintStart_toStartOf="@id/guideLineIconStart"
+        app:layout_constraintTop_toBottomOf="@id/playerpaperchoose"
+        android:contentDescription="@string/txt_scissors"/>
+
+    <TextView
+        android:id="@+id/txt_com"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/trulymadly"
+        android:text="@string/txt_com"
+        android:textColor="@color/colorFont"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/txt_paper"
+        app:layout_constraintEnd_toEndOf="@id/guideLineIconEnd"
+        app:layout_constraintStart_toStartOf="@id/guideLineIconEnd"/>
+
+    <ImageView
+        android:id="@+id/comRockChoose"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/rockhand"
+        app:layout_constraintEnd_toEndOf="@id/guideLineIconEnd"
+        app:layout_constraintStart_toStartOf="@id/guideLineIconEnd"
+        app:layout_constraintTop_toBottomOf="@id/txt_com"
+        android:contentDescription="@string/txt_rock"
+        />
+
+    <ImageView
+        android:id="@+id/comPaperChoose"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/paperhand"
+        app:layout_constraintEnd_toEndOf="@id/guideLineIconEnd"
+        app:layout_constraintStart_toStartOf="@id/guideLineIconEnd"
+        app:layout_constraintTop_toBottomOf="@id/comRockChoose"
+        android:contentDescription="@string/txt_paper"
+        />
+
+    <ImageView
+        android:id="@+id/comScissorsChoose"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/scissorchand"
+        app:layout_constraintEnd_toEndOf="@id/guideLineIconEnd"
+        app:layout_constraintStart_toStartOf="@id/guideLineIconEnd"
+        app:layout_constraintTop_toBottomOf="@id/comPaperChoose"
+        android:contentDescription="@string/txt_scissors"
+        />
+
+    <TextView
+        android:id="@+id/txt_results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guideLineStart"
+        app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+        app:layout_constraintTop_toTopOf="@id/guideLineMiddle"
+        android:text="@string/results"
+        android:textSize="16sp"
+        android:textColor="@color/colorFont"
+        />
+
+    <TextView
+        android:id="@+id/winnerResults"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="@id/guideLineStart"
+        app:layout_constraintEnd_toEndOf="@id/guideLineEnd"
+        app:layout_constraintTop_toBottomOf="@+id/txt_results"
+        android:text="@string/txt_dummy"
+        android:fontFamily="@font/trulymadly"
+        android:textSize="24sp"
+        android:background="@drawable/results_background"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/btn_tryagain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_try_again"
+        app:layout_constraintTop_toTopOf="@id/guideLineHorizontalMiddleScreen"
+        app:layout_constraintBottom_toBottomOf="@id/guideLineHorizontalMiddleScreen"
+        app:layout_constraintStart_toStartOf="@id/guideLineVerticalMiddleScreen"
+        app:layout_constraintEnd_toEndOf="@id/guideLineVerticalMiddleScreen"
+        android:textColor="@color/colorBlue"
+        android:textSize="16sp"
         />
 
 

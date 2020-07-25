@@ -10,6 +10,313 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidleLineStartScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidleLineEndScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorWhite"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="@id/guidleLineEndScreen"
+            app:layout_constraintStart_toStartOf="@id/guidleLineStartScreen"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidleLineStartBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidleLineEndBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/trulymadly"
+                android:text="@string/txt_rules"
+                android:textAllCaps="true"
+                android:textColor="@color/colorFont"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/guidleLineStartBar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            app:layout_constraintEnd_toEndOf="@id/guidleLineEndScreen"
+            app:layout_constraintStart_toStartOf="@id/guidleLineStartScreen"
+            app:layout_constraintTop_toBottomOf="@id/appBar">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidleLineStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.1" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidleLineEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
+
+            <TextView
+                android:id="@+id/txt_kind_player"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/atariclassicchunky"
+                android:text="@string/txt_the_player_in_game"
+                android:textColor="@color/colorFont"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/guidleLineStart"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/userImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/txt_user"
+                android:src="@drawable/avatar"
+                app:layout_constraintStart_toStartOf="@id/guidleLineStart"
+                app:layout_constraintTop_toBottomOf="@id/txt_kind_player" />
+
+            <TextView
+                android:id="@+id/playerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/trulymadly"
+                android:text="@string/txt_player"
+                android:textColor="@color/colorFont"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/userImage"
+                app:layout_constraintTop_toTopOf="@id/userImage" />
+
+            <TextView
+                android:id="@+id/playerDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/bubbleboddyextralight"
+                android:text="@string/player_desc"
+                android:textColor="@color/colorFont"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/guidleLineEnd"
+                app:layout_constraintStart_toEndOf="@id/userImage"
+                app:layout_constraintTop_toBottomOf="@id/playerTitle" />
+
+            <ImageView
+                android:id="@+id/comImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/txt_user"
+                android:src="@drawable/avatar"
+                app:layout_constraintStart_toStartOf="@id/guidleLineStart"
+                app:layout_constraintTop_toBottomOf="@id/userImage" />
+
+            <TextView
+                android:id="@+id/comTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/trulymadly"
+                android:text="@string/txt_com"
+                android:textColor="@color/colorFont"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/comImage"
+                app:layout_constraintTop_toTopOf="@id/comImage" />
+
+            <TextView
+                android:id="@+id/comDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/bubbleboddyextralight"
+                android:text="@string/com_desc"
+                android:textColor="@color/colorFont"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/guidleLineEnd"
+                app:layout_constraintStart_toEndOf="@id/comImage"
+                app:layout_constraintTop_toBottomOf="@id/comTitle" />
+
+            <TextView
+                android:id="@+id/txt_item_choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/atariclassicchunky"
+                android:text="@string/txt_item_in_game"
+                android:textColor="@color/colorFont"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/guidleLineStart"
+                app:layout_constraintTop_toBottomOf="@id/comImage" />
+
+            <ImageView
+                android:id="@+id/rockImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/txt_user"
+                android:src="@drawable/rockhand"
+                app:layout_constraintStart_toStartOf="@id/guidleLineStart"
+                app:layout_constraintTop_toBottomOf="@id/txt_item_choose" />
+
+            <TextView
+                android:id="@+id/rockTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/trulymadly"
+                android:text="@string/txt_rock"
+                android:textColor="@color/colorFont"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/rockImage"
+                app:layout_constraintTop_toTopOf="@id/rockImage" />
+
+            <TextView
+                android:id="@+id/rockDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/bubbleboddyextralight"
+                android:text="@string/rock_desc"
+                android:textColor="@color/colorFont"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/guidleLineEnd"
+                app:layout_constraintStart_toEndOf="@id/rockImage"
+                app:layout_constraintTop_toBottomOf="@id/rockTitle" />
+
+            <ImageView
+                android:id="@+id/paperImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/txt_user"
+                android:src="@drawable/paperhand"
+                app:layout_constraintStart_toStartOf="@id/guidleLineStart"
+                app:layout_constraintTop_toBottomOf="@id/rockImage" />
+
+            <TextView
+                android:id="@+id/paperTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/trulymadly"
+                android:text="@string/txt_paper"
+                android:textColor="@color/colorFont"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/paperImage"
+                app:layout_constraintTop_toTopOf="@id/paperImage" />
+
+            <TextView
+                android:id="@+id/paperDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/bubbleboddyextralight"
+                android:text="@string/paper_desc"
+                android:textColor="@color/colorFont"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/guidleLineEnd"
+                app:layout_constraintStart_toEndOf="@id/paperImage"
+                app:layout_constraintTop_toBottomOf="@id/paperTitle" />
+
+            <ImageView
+                android:id="@+id/guntingImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/txt_user"
+                android:src="@drawable/scissorchand"
+                app:layout_constraintStart_toStartOf="@id/guidleLineStart"
+                app:layout_constraintTop_toBottomOf="@id/paperImage" />
+
+            <TextView
+                android:id="@+id/guntingTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/trulymadly"
+                android:text="@string/txt_scissors"
+                android:textColor="@color/colorFont"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/guntingImage"
+                app:layout_constraintTop_toTopOf="@id/guntingImage" />
+
+            <TextView
+                android:id="@+id/guntingDesc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/bubbleboddyextralight"
+                android:text="@string/scissors_desc"
+                android:textColor="@color/colorFont"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/guidleLineEnd"
+                app:layout_constraintStart_toEndOf="@id/guntingImage"
+                app:layout_constraintTop_toBottomOf="@id/guntingTitle" />
+
+            <TextView
+                android:id="@+id/txt_how_playe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/atariclassicchunky"
+                android:text="@string/txt_the_game_play"
+                android:textColor="@color/colorFont"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/guidleLineStart"
+                app:layout_constraintTop_toBottomOf="@id/guntingImage" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txt_how_playe"
+                app:layout_constraintStart_toStartOf="@id/guidleLineStart"
+                app:layout_constraintEnd_toEndOf="@id/guidleLineEnd"
+                android:layout_marginTop="20dp"
+                android:text="@string/game_decs"
+                android:fontFamily="@font/trulymadly"
+                android:textColor="@color/colorFont"
+                android:textSize="16sp"
+                android:letterSpacing=".025"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

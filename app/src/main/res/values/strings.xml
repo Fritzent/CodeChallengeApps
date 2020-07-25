@@ -20,4 +20,15 @@
     <string name="txt_draw">draw</string>
     <string name="txt_player_win">Player Win</string>
     <string name="txt_com_win">Com Winner</string>
+    <string name="txt_rules">Rules</string>
+    <string name="txt_the_player_in_game">The player in Game</string>
+    <string name="txt_user">user</string>
+    <string name="player_desc">You as the player one in the game</string>
+    <string name="com_desc">computer as the enemy in the game</string>
+    <string name="txt_item_in_game">Item in Game</string>
+    <string name="rock_desc">Item rock only can win if fight with item scissors</string>
+    <string name="paper_desc">Item paper only can win if fight with item rock</string>
+    <string name="scissors_desc">Item scissors only can win if fight with item paper</string>
+    <string name="txt_the_game_play">The game play</string>
+    <string name="game_decs">Player choose one item then the computer can choose the item to and the result of game can show in the result column and if the player want to try again hint the try again text.</string>
 </resources>

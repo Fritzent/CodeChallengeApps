@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CodeChallengeApps</string>
+    <string name="game_template">game template</string>
+    <string name="txt_start">start</string>
+    <string name="txt_tutor">how to play</string>
+    <string name="txt_exit">exit</string>
+    <string name="txt_created">Created By</string>
+    <string name="txt_creator">afritzent</string>
+    <string name="message">Do you want to close the application?</string>
+</resources>

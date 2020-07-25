@@ -31,6 +31,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(applicationContext,GameActivity::class.java))
         }
 
+        mainBinding.btnTutorial.setOnClickListener {
+            startActivity(Intent(applicationContext, IntroActivity::class.java))
+        }
+
         mainBinding.btnExit.setOnClickListener {
             closeApps(titleFont,subFont)
         }

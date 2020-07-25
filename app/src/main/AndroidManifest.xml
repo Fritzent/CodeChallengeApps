@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GameActivity" android:theme="@style/CodeChallangeApps"/>
+        <activity android:name=".IntroActivity"></activity>
+        <activity
+            android:name=".GameActivity"
+            android:theme="@style/CodeChallangeApps" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/CodeChallangeApps">
